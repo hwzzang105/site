@@ -1,0 +1,38 @@
+ @charset "utf-8";
+ 
+ /*메인*/
+ .contents { clear: both; width: 1280px; margin: 0 auto; background-color: #E1E1E1;}
+ .ban1 img {width: 1280px; height: 600px;}
+ .sub_vs1 { clear:both; width: 100%; overflow-x: hidden;}
+ .ban1 { width: 400%;}
+ .ban1 li { width: 25%; float: left;}
+ .page { clear: both;}
+ .page_tit1 { text-align: center; padding-top: 100px; padding-bottom: 50px; font-size: 30px;}
+ 
+ .lst1 { clear: both;}
+ .lst1 img {width: 400px; height: 563px;}
+ .lst1 li { float: left; margin-right: 40px;  overflow: hidden; border-radius: 30px;}
+ .lst1 li:nth-child(3n) { margin-right: 0; }
+ .lst1 .item_tit { font-size: 24px; color: #333;}
+ .lst1 .item_com { font-size: 12px; color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+ .ban2 img { width: 1000px; height: 350px;}
+ .sub_vs2 { clear: both; width: 100%; overflow: hidden;}
+ .ban2 { display: block; ; margin-top: 200px; margin-left: 140px; width: 400%; }
+ .ban2 li { width: 25%; float: left; }
+
+ .page_tit2 { text-align: center; padding-top: 100px; padding-bottom: 50px; font-size: 30px;}
+ .lst2 { clear: both;}
+ .lst2 img { width: 350px; height: 630px;}
+ .lst2 li { float: left; margin-left: 193px; margin-bottom: 100px; }
+ .lst2 .item_tit { font-size: 24px; color: #333;}
+ .lst2 .item_com { font-size: 12px; color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+ .youtube {margin-left: 168px; margin-top: 100px;}
+ .caption {margin-right: 168px; margin-left: 168px; max-height: 100px; 
+ overflow-y: auto; line-height: 1.6; font-size: 14px; color: #000;}
+ 
+ .bottomban img {width: 400px; height: 150px;}
+ .bottomban {clear: both; margin-top: 50px; }
+ .btban li {float: left; margin-right: 40px; margin-bottom: 100px; overflow: hidden;}
+ .btban li:nth-child(3n) { margin-right: 0; }

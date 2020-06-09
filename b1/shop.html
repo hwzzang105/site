@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="title" content="MAMONGDE">
+    <meta name="subject" content="우리 브랜드는 최상의 품질과 서비스로 보답하겠습니다">
+    <meta name="author" content="Mr Lee">
+    <meta name="keywords" content="화장품, 브랜드, 쇼핑몰, 인터넷 쇼핑, 스킨케어, 토너, 메이크업, 네일, 향수">
+    <meta property="og:title" content="MAMONGDE">
+    <meta property="og:description" content="우리 브랜드는 최상의 품질과 서비스로 보답하겠습니다.">
+    <meta property="og:image" content="hwzzang105.github.io/b1/img/logo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>MAMONGDE</title>
+
+    <!-- 16x16, 24x24, 32x32, 48x48, 64x64 -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- 아이폰의 2.0 이상일 경우-->
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <!-- IE를 사용하는 경우-->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="facicon-144.png">
+    <!-- 파이어폭스, 오페라(크롬 일부)의 경우 썸네일로 제공될때 -->
+    <link rel="icon" href="favicon-16.png" sizes="=16x16">
+    <link rel="icon" href="favicon-32.png" sizes="=32x32">
+    <link rel="icon" href="favicon-48.png" sizes="=48x48">
+    <link rel="icon" href="favicon-64.png" sizes="=64x64">
+    <link rel="icon" href="favicon-128.png" sizes="=128x128">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet">
+    
+    <!-- 공통 아이콘-->
+    <link rel="stylesheet" href="./XEIcon-2.2.0/xeicon.min.css">
+    <!-- 최적화 -->
+    
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="sub.css">
+    
+    <style>
+    .blank { clear:both; }
+    /* 상품 탭 */
+    .item_box { clear:both; }
+    .item_box li { float:left; margin-right: 160px; width: 320px;
+    height: 360px;  overflow:hidden; }
+    .item_box ul li:nth-child(3n) { margin-right: 0; } 
+    .item_box li img { display:block; width: 320px; }
+    .item_box li a { color: #333;}
+    .item_box ul { float:left; display:none; }
+    .ra_item { display: none; }
+    #ra0:checked ~ .item_box ul { display:block;  }
+    #ra1:checked ~ .item_box .item1 { display:block; }
+    #ra2:checked ~ .item_box .item2 { display:block; }
+    #ra3:checked ~ .item_box .item3 { display:block; }
+    #ra4:checked ~ .item_box .item4 { display:block; }
+    #ra5:checked ~ .item_box .item5 { display:block; }
+    .lb_box {clear: both;}
+    .lb_box li {float: left;}
+    .lb_box li label {display: block; width: 90px; height: 36px; line-height: 36px;
+     text-align: center; background: #999; margin:12px 16px 12px 0px; cursor:pointer; color:black; }
+     #ra0:checked ~ .lb_box .bt0 { color:#fff; background:deeppink; }
+    #ra1:checked ~ .lb_box .bt1 { color:#fff; background:deeppink; }
+    #ra2:checked ~ .lb_box .bt2 { color:#fff; background:deeppink; }
+    #ra3:checked ~ .lb_box .bt3 { color:#fff; background:deeppink; }
+    #ra4:checked ~ .lb_box .bt4 { color:#fff; background:deeppink; }
+    #ra5:checked ~ .lb_box .bt5 { color:#fff; background:deeppink; }
+
+
+    /*레이어 팝업*/
+    
+    .it_pop { position:fixed; width: 100vw; height: 100vh; 
+    z-index:9999; left: 0; top: 0; background:rgba(42, 36, 36, 0.8); display:none; }
+    .it_pop:target { display:block; }
+    .item_pop { width:800px; height:600px; margin:50px auto; 
+    background:rgba(250,250,250,0.8); }
+    .pop_head { clear:both; width: 100%; height: 38px; line-height: 38px; background:#333; color:#fff; }
+    .pop_tit { float:left; padding-left:24px;}
+    .pop_close { display:block; float:right; color:#fff; width: 38px; height: 38px; text-align:center; }
+    .pop_item_box { clear:both; }
+    .pop_item_box img { display:block; width: 600px; height: 400px; margin: 20px auto; }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="common.js"></script>
+
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="hd">
+
+            <div class="top_wrap">
+                <nav class="tnb">
+                    <ul class="left">
+                        <li><a href="tel:080-023-5454">고객센터(수신자부담) : 080-023-5454</a></li>
+                        <li><a href="index_lang.html">LANGUAGE</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                        <li>
+                            <a href="cart.html">
+                                <span>CART</span>
+                                <span class="count">0</span>
+                            </a>
+                        </li>
+                        <li><a href="mypage.html">MyPage</a></li>
+                        <li class="btn">
+                            <a href="#search">
+                                <i class="xi-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <div class="bottom_wrap">
+
+                <nav class="gnb">
+                        <a href="index.html" class="logo"><img src="./img/logo.JPG" alt="로고"></a>
+                    <ul class="menu">    
+                        <li><a href="membership.html">멤버쉽</a></li>
+                        <li><a href="shop.html">구매하기</a></li>
+                        <li><a href="qna.html">공지사항/Q&A</a></li>
+                        <li><a href="find.html">매장찾기</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <div class="bread">
+            <ul class="bc">
+                <li><a href="index.html"><i class="xi-home"></i></a></li>
+                <li><span>구매하기</span></li>
+            </ul>
+        </div>
+
+       <figure class="vs">
+            <ul class="ban">
+                <li><img src="./img/mondeban.jpg" alt="서브비주얼배너"></li>
+            </ul>
+        </figure>
+        <div class="contents">
+            <input type="radio" name="ra" id="ra0" class="ra_item" checked>
+            <input type="radio" name="ra" id="ra1" class="ra_item">
+            <input type="radio" name="ra" id="ra2" class="ra_item">
+            <input type="radio" name="ra" id="ra3" class="ra_item">
+            <input type="radio" name="ra" id="ra4" class="ra_item">
+            <input type="radio" name="ra" id="ra5" class="ra_item">
+            <div class="lb_box">
+                <ul class="btn_group">
+                    <li><label for="ra0" class="bt0">전체</label></li>
+                    <li><label for="ra1" class="bt1">스킨케어</label></li>
+                    <li><label for="ra2" class="bt2">메이크업</label></li>
+                    <li><label for="ra3" class="bt3">생활용품</label></li>
+                    <li><label for="ra4" class="bt4">남성</label></li>
+                    <li><label for="ra5" class="bt5">선물추천</label></li>
+                </ul>
+            </div>
+            <section class="item_box">
+                <ul class="item1">
+                    <li>
+                        <a href="#it1">
+                            <img src="./img/skin1.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">에브리데이 선스틱</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#it2">
+                            <img src="./img/skin2.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">로즈워터 토너500ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#it3">
+                            <img src="./img/skin3.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">세라마이드 에멀젼 150ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#it4">
+                            <img src="./img/skin4.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">트리플 멀티 클렌징 티슈 80매</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#it5">
+                            <img src="./img/skin5.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">세라마이드 인텐스 크림 50ml</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item2">
+                    <li>
+                        <a href="">
+                            <img src="./img/make1.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">크리미 틴트 스퀴즈 립</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/make2.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">코튼 베일 파우더 팩트 12g</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/make3.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">내추럴 오토펜슬 아이브로우</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/make4.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">퓨어 립 컬러 립밤 1.6g</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/make5.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">올 스테이 파운데이션 20ml</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item3">
+                    <li>
+                        <a href="">
+                            <img src="./img/daily1.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">팡팡 헤어 스틱 섀도우</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/daily2.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">팡팡 헤어 섀도우 3.5g</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/daily3.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">플라워 센티드 핸드크림 50ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/daily4.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">팡팡 헤어 섀도우 듀오세트 3.5g*2</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/daily5.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">플라워랩 에센스 마스크 1매</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item4">
+                    <li>
+                        <a href="">
+                            <img src="./img/man1.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">맨 리차징 올인원 플루이드 50ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/man2.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">맨 리차징 크림 50ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/man3.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">맨 리차징 로션 150ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/man4.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">맨 리차징 토너 180ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/man5.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">맨 리차징 2종 세트</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item5">
+                    <li>
+                        <a href="">
+                            <img src="./img/present1.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">크리미틴트 컬러밤 글라이드 1.2g</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/present2.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">로즈워터 젤 크림 80ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/present3.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">로즈 블레미쉬 클리어링 세럼 30ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/present4.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">맨 리차징 올인원 플루이드 180ml</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/present5.jpg" alt="">
+                            <h4 class="item_tit">마몽드</h4>
+                            <p class="item_com">인리치드 뉴트리 오일 30ml</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+        <footer class="ft">
+            <div class="ft_wrap">
+                <nav class="ft_topwrap">
+
+                    <ul class="ft_right">
+                        <li><a href="https://www.facebook.com/mamonde.kr/">페북</a></li>
+                        <li><a href="https://www.instagram.com/mamondekorea/">인스타</a></li>
+                        <li><a href="https://www.youtube.com/user/mamonderepair">유튜브</a></li>
+                    </ul>
+
+
+                    <ul class="ft_left">
+                    
+                        <h4 class="ft_tit">Mamonde</h4>
+                        <p class="ft_item">
+                            <span>회사소개</span>
+                            <span>서비스이용약관</span>
+                            <span>UGC 이용약관</span>
+                            <span>개인정보처리방침</span>
+                            <span>영상정보처리방침</span>
+                        </p>
+                        <p class="teltime">
+                            <span>고객서비스센터(수신자요금부담) 080-023-5454</span>
+                            <span>운영시간: 월~금 09:00~18:00</span>
+                        </p>            
+                    </ul>
+                    
+                    
+
+                
+                </nav>
+
+
+                <nav class="ft_btwrap">
+                
+                    <ul class="ft_fnb">
+                    
+                        <p class="ft_fnbt">AMOREPACIFIC</p>
+                        <p class="ft_fnbb">© AMOREPACIFIC CORPORATION. All rights reserved.</p>
+                    </ul>
+
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <div id="it1" class="it_pop">
+        <div class="item_pop">
+            <div class="pop_head">
+                <h3 class="pop_tit">에브리데이 선스틱</h3>
+                <a href="#" class="pop_close">X</a>
+            </div>
+        
+
+            <div class="pop_item_box">
+                <img src="./img/skin1.jpg" alt="">
+                <h2 class="pop_item_tit">마몽드 에브리데이 선스틱</h2>
+                <p class="pop_tiem_com">상품설명: 강력한 자외선 차단은 물론 미세먼지로부터 피부를 보호해주는 보송한 사용감의 Face & Body 겸용 선스틱 <br>가격:15000원 </p>
+            </div>
+        </div>
+    </div>
+    <div id="it2" class="it_pop">
+        <div class="item_pop">
+            <div class="pop_head">
+                <h3 class="pop_tit">[대용량]로즈워터 토너500ml</h3>
+                <a href="#" class="pop_close">X</a>
+            </div>
+            <div class="pop_item_box">
+                <img src="./img/skin2.jpg" alt="">
+                <h2 class="pop_item_tit">로즈워터 토너 500ml</h2>
+                <p class="pop_tiem_com">상품설명:닦을수록 촉촉한 진정보습 장미수 토너 <br>가격:25000 </p>
+            </div>
+        </div>
+    </div>
+    <div id="it3" class="it_pop">
+        <div class="item_pop">
+            <div class="pop_head">
+                <h3 class="pop_tit">세라마이드 에멀젼</h3>
+                <a href="#" class="pop_close">X</a>
+            </div>
+        
+
+            <div class="pop_item_box">
+                <img src="./img/skin3.jpg" alt="">
+                <h2 class="pop_item_tit">세라마이드 에멀젼 150ml</h2>
+                <p class="pop_tiem_com">상품설명: 흐트러진 피부 장벽을 강화 시켜 주어 빈틈 없는 촉촉함을 제공하는 고보습 에멀젼
+                    <br>가격:18000 </p>
+            </div>
+        </div>
+    </div>
+    <div id="it4" class="it_pop">
+        <div class="item_pop">
+            <div class="pop_head">
+                <h3 class="pop_tit">트리플 멀티 클렌징 티슈 80매</h3>
+                <a href="#" class="pop_close">X</a>
+            </div>
+        
+
+            <div class="pop_item_box">
+                <img src="./img/skin4.jpg" alt="">
+                <h2 class="pop_item_tit">트리플 멀티 클렌징 티슈 80매</h2>
+                <p class="pop_tiem_com">상품설명:미끌거리지 않고 산뜻하게 마무리되며, 빠르고 간편하게 메이크업을 제거해주는 산뜻한 클렌징 티슈 
+                    <br>가격:10000</p>
+            </div>
+        </div>
+    </div>
+    <div id="it5" class="it_pop">
+        <div class="item_pop">
+            <div class="pop_head">
+                <h3 class="pop_tit">세라마이드 인텐스 크림 50ml</h3>
+                <a href="#" class="pop_close">X</a>
+            </div>
+        
+
+            <div class="pop_item_box">
+                <img src="./img/skin5.jpg" alt="">
+                <h2 class="pop_item_tit">세라마이드 인텐스 크림 50ml</h2>
+                <p class="pop_tiem_com">상품설명:흐트러진 피부 장벽을 강화시켜 촉촉하고 힘있는 피부로 가꿔주는 무궁화 보습 장벽 크림 
+                    <br>가격:29000</p>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

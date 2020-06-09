@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/*초기화*/
+* {margin: 0; padding: 0;}
+body, html { width: 100%; min-width: 1280px; font-family: 'Noto Sans KR', sans-serif;}
+ul { list-style: none;}
+a { text-decoration: none;}
+
+/* 공통 스타일 */
+.wrap { width: 100%;}
+.hd { clear: both; width: 100%;}
+.top_wrap, .bottom_wrap { clear: both; width: 100%;}
+.top_wrap {border-bottom: 1px solid #333; height: 30px;}
+.bottom_wrap { height: 70px; position:relative; top:auto; left:auto; z-index:999; background:rgba(255,255,255,1); border-bottom:0;}
+.bottom_wrap.active {position:fixed; top:0; left:0; border-bottom:3px solid #ccc;}
+.tnb { width: 1280px; margin: 0 auto;}
+.tnb .left { float: left;}
+.tnb .right { float: right;}
+.tnb ul li { float: left;}
+.tnb ul li a { font-size: 15px; color: #333; display: block; height: 30px; line-height: 30px;}
+.tnb .left li a { padding-right: 30px; border-left: 1px solid #333; padding-left: 20px;}
+.tnb .right li a { padding-left: 20px;}
+.tnb .right li a span { display: block; float: left;}
+.count { background-color: #333; color: #fff; width: 20px; height: 20px; font-size: 15px; line-height: 20px; text-align: center; border-radius: 10px; margin-top: 5px; margin-left: 3px;}
+.top_wrap .btn { border-left: 1px solid #333; margin-left: 20px; padding-left: 10px; border-right: 1px solid #333; padding-right: 10px; }
+.tnb .right li.btn a { padding-left: 0;}
+
+.gnb { width: 1280px; margin: 0 auto; position: relative;}
+.logo { clear: both; position: absolute; left: 0; top: 15px; }
+.logo img { width: 200px; height: 50px; }
+.menu { width: 500px; margin: 0 auto;}
+.menu li { float: left; padding: 20px; margin-top: 50px;}
+.menu li a { color: #333; font-size: 20px;}
+
+.contents{ clear: both; width: 1280px; margin: 0 auto;}
+
+/*푸터*/
+.ft {clear: both; width: 100%;border-top: 2px solid #333; ;}
+.ft_topwrap { width: 100%;}
+.ft_topwrap ul {margin-bottom: 10px}
+.ft_wrap { clear: both; margin-left: 30px; margin-right: 30px;}
+.ft_topwrap .ft_left {float: left;}
+
+.ft_tit {margin-top: 60px; margin-bottom: 10px; font-size: 25px;}
+.ft_left .ft_item span {float: left; padding-right: 25px; margin-bottom: 5px;}
+.ft_left .teltime { clear: both; float:left;}
+.ft_left .teltime span { padding-right: 25px;}
+
+.ft_topwrap .ft_right {clear: both;  padding-top: 40px;}
+.ft_topwrap .ft_right li {display:block; float: right;  margin-right: 25px;}
+.ft_topwrap .ft_right li a {color:#333; font-size: 20px; }
+
+
+.ft_btwrap {clear: both; border-top: 2px solid #333;}
+.ft_btwrap ul { margin-top: 10px;}
+.ft_btwrap .ft_fnbt {float: left; margin-right: 25px;}
+.ft_btwrap .ft_fnbb {margin-bottom: 80px;}

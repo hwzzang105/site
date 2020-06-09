@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+/* 콘텐츠 영역의 공통 스타일 */
+/* 스타일가이드에 제시된 배경색 */
+.cc0c0c0 {
+    background-color: #c0c0c0;
+}
+
+.cffffff {
+    background-color: #ffffff;
+}
+
+.c000000 {
+    background-color: #000000;
+}
+
+.c2a2e40 {
+    background-color: #2a2e40;
+}
+
+.c7d92f3 {
+    background-color: #7d92f3;
+}
+
+.c24756d {
+    background-color: #24756d;
+}
+
+.c333333 {
+    background-color: #333333;
+}
+
+.c545454 {
+    background-color: #545454;
+}
+
+.c008ace {
+    background-color: #008ace;
+}
+
+.c2763ba {
+    background-color: #2763ba;
+}
+
+.c2ca48f {
+    background-color: #2ca48f;
+}
+
+.c3298b7 {
+    background-color: #3298b7;
+}
+
+.c627ad0 {
+    background-color: #627ad0;
+}
+
+/* 스타일가이드에 제시된 글자색 */
+.whtxt {
+    color: #fff;
+}
+
+.whtxt a {
+    color: #fff;
+}
+
+.whtxt1 {
+    color: #333;
+}
+
+.whtxt2 {
+    color: #545454;
+}
+
+.whtxt3 {
+    color: #525877;
+}
+
+.whtxt4 {
+    color: #3f539d;
+}
+
+/* 스타일가이드에 제시된 박스 설정내용 - 그리드 포함 */
+.row {
+    clear: both;
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.row li {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    height: 260px;
+    overflow: hidden;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.row li.txt_left {
+    text-align: left;
+}
+
+.row.ht350 {
+    height: 350px;
+}
+
+.row.ht350 li {
+    height: 350px;
+}
+
+.row li:first-child {
+    clear: both;
+    margin-left: 0;
+}
+
+.col3 {
+    width: 260px;
+    border: 1px solid #2763ba;
+}
+
+.col4 {
+    width: 346.666px;
+}
+
+.col6 {
+    width: 540px;
+}
+
+.col12 {
+    width: 1200px;
+}
+
+.row li a {
+    display: block;
+}
+
+/* 스타일가이드에 제시된 글자의 모양, 크기, 정렬 */
+.page_tit {
+    text-align: center;
+    font-size: 36px;
+    padding-top: 90px;
+}
+
+.page_com {
+    text-align: center;
+    font-size: 16px;
+    padding: 30px;
+}
+
+/* 스타일가이드에 제시된 박스 안의 공통내용 */
+.bar {
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #fff;
+    margin: 15px auto;
+}
+
+.grd_tit {
+    line-height: 1.6;
+    padding-top: 15px;
+}
+
+.grd_com {
+    padding-top: 20px;
+}
+
+.grd_guide {
+    padding-top: 10px;
+}
+
+.st_txt {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.grd_lst,
+.grd_lst2 {
+    width: 205px;
+    margin: 10px auto;
+    margin-top: 38px;
+}
+
+.row li .grd_lst li {
+    width: 100px;
+    float: left;
+    padding: 0;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 0;
+}
+
+.row li .grd_lst li a {
+    display: block;
+    line-height: 32px;
+    height: 32px;
+    width: 98px;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 13px;
+    overflow: hidden;
+    position: relative;
+}
+
+.row li .grd_lst2 li {
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    margin: 0;
+    padding: 0;
+}
+
+.row li .grd_lst2 li a {
+    display: inline;
+    line-height: 32px;
+    padding: 4px 13px;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 13px;
+    overflow: hidden;
+    position: relative;
+}
+
+.row li .grd_lst li a::after {
+    content: "";
+    display: block;
+    width: 98px;
+    height: 32px;
+    background: rgba(33, 33, 33, 0.45);
+    position: absolute;
+    right: -100px;
+    top: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: easeout;
+}
+
+.row li .grd_lst li a:hover::after {
+    right: 0;
+}
+
+.grd_lst li:last-child a {
+    border-right: 1px solid #fff;
+}
+
+.grd_lst2 li:last-child a {
+    border-right: 1px solid #fff;
+}
+
+.inner,
+.page_wrap,
+.main_vs,
+.fnb,
+.info {
+    clear: both;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.row li .grd_sn {
+    width: 204px;
+    margin: 25px auto;
+}
+
+.row li .grd_sn li {
+    clear: both;
+    width: 204px;
+    height: 34px;
+    line-height: 34px;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+.row li .grd_sn li:last-child {
+    border-bottom: 1px solid #fff;
+}
+
+.row li .grd_sn li a {
+    display: block;
+    width: 204px;
+    height: 34px;
+    height: 34px;
+    text-align: center;
+}

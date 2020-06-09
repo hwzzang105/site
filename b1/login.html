@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="title" content="MAMONGDE">
+    <meta name="subject" content="우리 브랜드는 최상의 품질과 서비스로 보답하겠습니다">
+    <meta name="author" content="Mr Lee">
+    <meta name="keywords" content="화장품, 브랜드, 쇼핑몰, 인터넷 쇼핑, 스킨케어, 토너, 메이크업, 네일, 향수">
+    <meta property="og:title" content="MAMONGDE">
+    <meta property="og:description" content="우리 브랜드는 최상의 품질과 서비스로 보답하겠습니다.">
+    <meta property="og:image" content="hwzzang105.github.io/b1/img/logo.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>MAMONGDE</title>
+
+    <!-- 16x16, 24x24, 32x32, 48x48, 64x64 -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- 아이폰의 2.0 이상일 경우-->
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <!-- IE를 사용하는 경우-->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="facicon-144.png">
+    <!-- 파이어폭스, 오페라(크롬 일부)의 경우 썸네일로 제공될때 -->
+    <link rel="icon" href="favicon-16.png" sizes="=16x16">
+    <link rel="icon" href="favicon-32.png" sizes="=32x32">
+    <link rel="icon" href="favicon-48.png" sizes="=48x48">
+    <link rel="icon" href="favicon-64.png" sizes="=64x64">
+    <link rel="icon" href="favicon-128.png" sizes="=128x128">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet">
+    
+    <!-- 공통 아이콘-->
+    <link rel="stylesheet" href="./XEIcon-2.2.0/xeicon.min.css">
+    <!-- 최적화 -->
+    
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="sub.css">
+    
+    <style>
+    .blank { clear:both; }
+    
+    .page { clear: both; width: 1280px; margin: 0 auto; margin-top: 56px; }
+    .page_tit { text-align: center; font-size: 40px;}
+   
+   
+   
+    .frm { clear: both; margin-top: 30px;}
+    .frm fieldset, .frm .btn_fr {clear: both; border: 0; outline: 0; width: 960px; margin: 20px auto;}
+    .indata { display: block; width: 400px; height: 40px; line-height: 40px; font-size: 18px; margin: 20px auto;}
+    .frm .btn_fr { width: 410px;}
+    .fr_comment { clear: both; width: 410px; margin:0 auto; line-height: 42px; border-top: 2px solid #333;}
+    .fr_comment a { color: #333;}
+    .btn_fr li {float: left;}
+    .fr_btn { display: block; width: 100px; text-align: center; height: 42px; line-height: 42px; background: #333;
+    color: #fff; outline: 0; border: 0; border-radius: 8px; cursor: pointer; margin: 18px;}
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="common.js"></script>
+
+</head>
+<body>
+
+    <div class="wrap">
+
+        <header class="hd">
+
+            <div class="top_wrap">
+                <nav class="tnb">
+                    <ul class="left">
+                        <li><a href="tel:080-023-5454">고객센터(수신자부담) : 080-023-5454</a></li>
+                        <li><a href="index_lang.html">LANGUAGE</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                        <li>
+                            <a href="cart.html">
+                                <span>CART</span>
+                                <span class="count">0</span>
+                            </a>
+                        </li>
+                        <li><a href="mypage.html">MyPage</a></li>
+                        <li class="btn">
+                            <a href="#search">
+                                <i class="xi-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <div class="bottom_wrap">
+
+                <nav class="gnb">
+                        <a href="index.html" class="logo"><img src="./img/logo.JPG" alt="로고"></a>
+                    <ul class="menu">    
+                        <li><a href="membership.html">멤버쉽</a></li>
+                        <li><a href="shop.html">구매하기</a></li>
+                        <li><a href="qna.html">공지사항/Q&A</a></li>
+                        <li><a href="find.html">매장찾기</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <div class="bread">
+            <ul class="bc">
+                <li><a href="index.html"><i class="xi-home"></i></a></li>
+                <li><span>로그인</span></li>
+            </ul>
+        </div>
+
+       <figure class="vs">
+            <ul class="ban">
+                <li><img src="./img/mondeban.jpg" alt="서브비주얼배너"></li>
+            </ul>
+        </figure>
+       
+        <div class="contents">
+
+            <section class="page" id="login">
+                <h2 class="page_tit">로그인</h2>
+                <form action="" id="frm1" class="frm">
+                    <fieldset>
+                        <input type="text" placeholder="아이디를 입력해 주세요" id="id" class="indata" autofocus>
+                        <input type="password" placeholder="비밀번호를 입력해 주세요" id="pw" class="indata">
+                    </fieldset>
+                    <ul class="btn_fr">
+                        <li>
+                            <input type="submit" value="로그인" class="fr_btn">
+                        </li>
+                        <li>
+                            <input type="reset" value="취소" class="fr_btn">
+                        </li>
+                        <li>
+                            <a href="join.html" class="fr_btn">회원가입</a>
+                        </li>
+                    </ul>
+                </form>
+                <div class="fr_comment">
+                    <p><a href="">아이디를 잊으셨습니까?</a></p>
+                    <p><a href="">비밀번호를 잊으셨습니까?</a></p>
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+        <footer class="ft">
+            <div class="ft_wrap">
+                <nav class="ft_topwrap">
+
+                    <ul class="ft_right">
+                        <li><a href="https://www.facebook.com/mamonde.kr/">페북</a></li>
+                        <li><a href="https://www.instagram.com/mamondekorea/">인스타</a></li>
+                        <li><a href="https://www.youtube.com/user/mamonderepair">유튜브</a></li>
+                    </ul>
+
+
+                    <ul class="ft_left">
+                    
+                        <h4 class="ft_tit">Mamonde</h4>
+                        <p class="ft_item">
+                            <span>회사소개</span>
+                            <span>서비스이용약관</span>
+                            <span>UGC 이용약관</span>
+                            <span>개인정보처리방침</span>
+                            <span>영상정보처리방침</span>
+                        </p>
+                        <p class="teltime">
+                            <span>고객서비스센터(수신자요금부담) 080-023-5454</span>
+                            <span>운영시간: 월~금 09:00~18:00</span>
+                        </p>            
+                    </ul>
+                    
+                    
+
+                
+                </nav>
+
+
+                <nav class="ft_btwrap">
+                
+                    <ul class="ft_fnb">
+                    
+                        <p class="ft_fnbt">AMOREPACIFIC</p>
+                        <p class="ft_fnbb">© AMOREPACIFIC CORPORATION. All rights reserved.</p>
+                    </ul>
+
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    
+</body>
+</html>

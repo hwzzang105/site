@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/*메인배너*/
+.content {
+    clear: both;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.main_vs {
+    clear: both;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.ban_box {
+    width: 400%;
+}
+
+.ban_box li {
+    width: 25%;
+    float: left;
+}
+
+
+/*로그인 비회원로그인*/
+
+.log_ra {
+    display: none;
+}
+
+.col3 .login {
+    display: none;
+}
+
+.log_lb_box .log_lb {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#log_ra1:checked~#login1 {
+    display: block;
+}
+
+#log_ra2:checked~#login2 {
+    display: block;
+}
+
+.log_lb_box {
+    clear: both;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.log_lb_box .log_lb1 {
+    float: left;
+}
+
+.log_lb_box .log_lb2 {
+    float: left;
+    margin-left: 25px;
+}
+
+.login_input {
+    float: left;
+    display: block;
+    width: 187px;
+    height: 40px;
+    outline: 0;
+    border: 0.5px solid #333;
+    text-indent: 10px;
+}
+
+.log_link .log_join {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.log_link .log_idpw {
+    float: left;
+    margin-left: 21.5px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.log_link a {
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+
+.login_btn {
+    display: block;
+    width: 187px;
+    height: 40px;
+    font-size: 15px;
+    color: #fff;
+    outline: 0;
+    border: 0;
+}
+
+.frm_row {
+    clear: both;
+}
+
+.login_input2 {
+    float: left;
+    width: 92px;
+    height: 25px;
+    text-indent: 10px;
+    border: 0;
+    outline: 0;
+    border: 1px solid #333;
+}
+
+.login_input3 {
+    float: left;
+    width: 124px;
+    height: 25px;
+    text-indent: 10px;
+    border: 0;
+    outline: 0;
+    border: 1px solid #333;
+}
+
+.in_btn {
+    float: left;
+    width: 63px;
+    height: 27px;
+    color: #fff;
+    border: 0;
+    outline: 0;
+}
+
+.login_input4 {
+    float: left;
+    width: 92px;
+    height: 25px;
+    text-indent: 10px;
+    border: 0;
+    outline: 0;
+    border: 1px solid #333;
+    margin-bottom: 13px;
+}
+
+
+/*핫이슈*/
+.issue_con {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.issue_item1 a {
+    float: left;
+}
+
+.issue_item_tit {
+    float: left;
+    margin-right: 30px;
+    margin-left: 50px;
+}
+
+
+
+/* 스타일 가이드에 제시된 사진형 목록의 배경 이미지(건강정보) */
+.pic_lst li {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.pic_lst li.helth1 {
+    background-image: url("./img/bg_mainHealth01.jpg");
+}
+
+.pic_lst li.helth2 {
+    background-image: url("./img/bg_mainHealth02.jpg");
+}
+
+.pic_lst li.helth3 {
+    background-image: url("./img/bg_mainHealth03.jpg");
+}
+
+.pic_lst li.helth4 {
+    background-image: url("./img/bg_mainHealth04.jpg");
+}
+
+
+/*위치안내 원내위치 편의시설 */
+.icon_lst {
+    clear: both;
+    width: 1100px;
+}
+
+.icon_lst li {
+    display: block;
+    margin-left: 451px;
+}
+
+.icon_lst li span {
+    float: left;
+    margin-right: 20px;
+}

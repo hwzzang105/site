@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>은평리드힐병원</title>
+    
+    <meta name="title" content="리드힐병원">
+    <meta name="subject" content="환자에게 가장 먼저 선택을 받을 수 있는 믿음과 신뢰의 의료 서비스를 제공하겠습니다.">
+    <meta name="author" content="Mr Lee">
+    <meta name="keywords" content="병원, 척추, 내과, 관절, 도수재활, 외래진료, 응급진료, 진료예약, 의료상담">
+    <meta property="og:title" content="리드힐병원">
+    <meta property="og:description" content="환자에게 가장 먼저 선택을 받을 수 있는 믿음과 신뢰의 의료 서비스를 제공하겠습니다.">
+    <meta property="og:image" content="hwzzang105.github.io/c1/img/logo.jpg">
+    <!-- 16x16, 24x24, 32x32, 48x48, 64x64 -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.png">
+    <!-- 아이폰의 2.0 이상일 경우-->
+    <link rel="apple-touch-icon-precomposed" href="favicon-152.png">
+    <!-- IE를 사용하는 경우 -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    <!-- 파이어폭스, 오페라(크롬 일부)의 경우 썸네일로 제공될때 -->
+    <link rel="icon" href="favicon-16.png" sizes="16x16">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="icon" href="favicon-48.png" sizes="48x48">
+    <link rel="icon" href="favicon-64.png" sizes="64x64">
+    <link rel="icon" href="favicon-64.png" sizes="128x128">
+    <!--<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet">->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- 최적화 -->
+    
+    <link rel="stylesheet" href="./XEIcon-2.2.0/xeicon.min.css">
+    <!-- <link rel="stylesheet" href="./xeicon/xeicon.min.css"> -->
+    <!--<link rel="stylesheet" href="reset.css">-->
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./sub.css">
+
+    
+
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="./main.js"></script>
+
+    <!-- 지도-->
+    <link href="http://apis.map.daum.net/favicon.ico" rel="shortcut icon"> 
+
+    <meta name="viewport" content="width=720">
+    
+    <meta property="og:type" content="website">
+    
+    <meta property="og:title" content="Daum 지도 API">
+    
+    <link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
+    
+    <style>
+    
+    body { background:white; }
+    
+    </style>
+    
+    <script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
+    
+    <script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>
+    
+    <script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
+    
+
+
+</head>
+
+
+        <!--[if gte IE 10]><!-->
+
+<body class="web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
+
+        <!--<![endif]-->
+        
+        <!--[if lte IE 7]>
+        
+        <body class="very_low web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
+        
+        <![endif]-->
+        
+        <!--[if lte IE 9]>
+        
+        <body class="low web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
+        
+        <![endif]-->
+        
+    
+    <div class="container">
+
+        <header class="hdr">
+            <div class="hdr_wrap">
+                <nav id="tnb" class="inner">
+                    <a href="index.html" class="com_img logo"><img src="./img/logo.jpg" alt="로고"></a>
+                    <ul class="top">
+                        <li><a onclick="login_call()">로그인</a></li>
+                        <li><a href="join.html">회원가입</a></li>
+                        <li><a href="">온라인예약</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <script>
+                function login_call(){
+                    window.open("login.html", "child", "width=1100, height=450, top=100, left=300");
+                }    
+                </script>
+            <div class="hdr_wrap">
+                <nav id="gnb" class="inner">
+                    <input type="checkbox" class="ck_item" id="ck1">
+                    <input type="checkbox" class="ck_item" id="ck2">
+                    <label for="ck1" id="lb1" class="com_img lst_btn">
+                        <i class="xi-bars"></i>
+                    </label>
+                    <label for="ck1" class="lst_btn1 lst_close_btn">
+                        <i class="xi-close"></i>
+                    </label>
+                    <label for="ck2" id="lb2" class="com_img search_btn">
+                        <i class="xi-search"></i>
+                    </label>
+                    <div class="lst">
+                        <h2 class="tit2 lst_tit">바로가기메뉴</h2>
+                        <ul class="sitemap">
+                            <li>
+                                <h3 class="st_cate_tit">진료안내</h3>
+                                <dl class="st_lst">
+                                    <dt>진로상담예약</dt>
+                                    <dd><a href="">온라인진료상담</a></dd>
+                                    <dd><a href="">온라인진료에약</a></dd>
+                                    <dd><a href="">예약확인및수정</a></dd>
+                                    <dd><a href="">자주묻는질문</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h3 class="st_cate_tit">이용안내</h3>
+                                <dl class="st_lst">
+                                    <dt>병원이용안내</dt>
+                                    <dd><a href="">증명서류발급안내</a></dd>
+                                    <dd><a href="">비급여안내</a></dd>
+                                    <dd><a href="">외래진료안내</a></dd>
+                                    <dd><a href="">입퇴원안내</a></dd>
+                                    <dd><a href="">입원생활안내</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h3 class="st_cate_tit">척추센터</h3>
+                                <dl class="st_lst">
+                                    <dt>척추센터</dt>
+                                    <dd><a href="">의료진소개</a></dd>
+                                    <dd><a href="">척추클리닉</a></dd>
+                                    <dd><a href="">경/흉추클리닉</a></dd>
+                                    <dd><a href="">온라인상담</a></dd>
+                                    <dd><a href="">FAQ</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h3 class="st_cate_tit">감동나눔</h3>
+                                <dl class="st_lst">
+                                    <dt>감동나눔소식</dt>
+                                    <dd><a href="">치료후기</a></dd>
+                                    <dd><a href="">감사의편지</a></dd>
+                                    <dd><a href="">언론보도</a></dd>
+                                    <dd><a href="">병원행사</a></dd>
+                                    <dd><a href="">공지사항</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <h3 class="st_cate_tit">병원소개</h3>
+                                <dl class="st_lst">
+                                    <dt>병원소개</dt>
+                                    <dd><a href="">인사말</a></dd>
+                                    <dd><a href="">비전및미션</a></dd>
+                                    <dd><a href="">리드힐전문진료센터</a></dd>
+                                    <dd><a href="">전문의료진소개</a></dd>
+                                    <dd><a href="">병원현황</a></dd>
+                                    <dd><a href="">첨단장비</a></dd>
+                                    <dd><a href="">진료시간및오시는길</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="mainmenu">
+                        <li class="dp1">
+                            <a href="">진료안내</a>
+                            <div class="sub">
+                                <ul class="menu">
+                                    <li class="it1">
+                                        <dl class="menu_cate">
+                                            <dt>진로상담예약</dt>
+                                            <dd><a href="">온라인진료상담</a></dd>
+                                            <dd><a href="">온라인진료예약</a></dd>
+                                            <dd><a href="">예약확인및수정</a></dd>
+                                            <dd><a href="">자주묻는질문</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <div class="thumbox">
+                                    <ul>
+                                        <li><a href=""><img src="./img/img_3.jpg" alt="" class="thum1"></a></li>
+                                        <li><a href=""><img src="./img/img_2.jpg" alt="" class="thum2"></a></li>
+                                    </ul>
+                                    <dl>
+                                        <dt>※ 리드힐 진료시간</dt>
+                                        <dd>평일 : am 09:00~ pm 06:00</dd>
+                                        <dd>점심 : pm 01:00~ pm 02:00</dd>
+                                        <dd>토요일 : am 09:00~ pm 02:00 ( 토요일, 점심시간 없음 )<br>
+                                            일요일·공휴일 휴일</dd>
+                                    </dl>
+                                    <a href=""><img src="./img/img_1.jpg" alt="" class="thum"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <a href="">이용안내</a>
+                            <div class="sub">
+                                <ul class="menu">
+                                    <li class="it1">
+                                        <dl class="menu_cate">
+                                            <dt>병원이용안내</dt>
+                                            <dd><a href="">증빙서류발급안내</a></dd>
+                                            <dd><a href="">비급여안내</a></dd>
+                                            <dd><a href="">외래진료안내</a></dd>
+                                            <dd><a href="">입퇴원안내</a></dd>
+                                            <dd><a href="">입원생활안내</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <div class="thumbox">
+                                    <ul>
+                                        <li><a href=""><img src="./img/img_3.jpg" alt="" class="thum1"></a></li>
+                                        <li><a href=""><img src="./img/img_2.jpg" alt="" class="thum2"></a></li>
+                                    </ul>
+                                    <dl>
+                                        <dt>※ 리드힐 진료시간</dt>
+                                        <dd>평일 : am 09:00~ pm 06:00</dd>
+                                        <dd>점심 : pm 01:00~ pm 02:00</dd>
+                                        <dd>토요일 : am 09:00~ pm 02:00 ( 토요일, 점심시간 없음 )<br>
+                                            일요일·공휴일 휴일</dd>
+                                    </dl>
+                                    <a href=""><img src="./img/img_1.jpg" alt="" class="thum"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <a href="">척추센터</a>
+                            <div class="sub">
+                                <ul class="menu">
+                                    <li class="it1">
+                                        <dl class="menu_cate">
+                                            <dt>척추센터</dt>
+                                            <dd><a href="">의료진소개</a></dd>
+                                            <dd><a href="">척추클리닉</a></dd>
+                                            <dd><a href="">경/흉추클리닉</a></dd>
+                                            <dd><a href="">온라인상담</a></dd>
+                                            <dd><a href="">FAQ</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <div class="thumbox">
+                                    <ul>
+                                        <li><a href=""><img src="./img/img_3.jpg" alt="" class="thum1"></a></li>
+                                        <li><a href=""><img src="./img/img_2.jpg" alt="" class="thum2"></a></li>
+                                    </ul>
+                                    <dl>
+                                        <dt>※ 리드힐 진료시간</dt>
+                                        <dd>평일 : am 09:00~ pm 06:00</dd>
+                                        <dd>점심 : pm 01:00~ pm 02:00</dd>
+                                        <dd>토요일 : am 09:00~ pm 02:00 ( 토요일, 점심시간 없음 )<br>
+                                            일요일·공휴일 휴일</dd>
+                                    </dl>
+                                    <a href=""><img src="./img/img_1.jpg" alt="" class="thum"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <a href="">감동나눔</a>
+                            <div class="sub">
+                                <ul class="menu">
+                                    <li class="it1">
+                                        <dl class="menu_cate">
+                                            <dt>감동나눔소식</dt>
+                                            <dd><a href="">치료후기</a></dd>
+                                            <dd><a href="">감사의편지</a></dd>
+                                            <dd><a href="">언론보도</a></dd>
+                                            <dd><a href="">병원행사</a></dd>
+                                            <dd><a href="">공지사항</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <div class="thumbox">
+                                    <ul>
+                                        <li><a href=""><img src="./img/img_3.jpg" alt="" class="thum1"></a></li>
+                                        <li><a href=""><img src="./img/img_2.jpg" alt="" class="thum2"></a></li>
+                                    </ul>
+                                    <dl>
+                                        <dt>※ 리드힐 진료시간</dt>
+                                        <dd>평일 : am 09:00~ pm 06:00</dd>
+                                        <dd>점심 : pm 01:00~ pm 02:00</dd>
+                                        <dd>토요일 : am 09:00~ pm 02:00 ( 토요일, 점심시간 없음 )<br>
+                                            일요일·공휴일 휴일</dd>
+                                    </dl>
+                                    <a href=""><img src="./img/img_1.jpg" alt="" class="thum"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dp1">
+                            <a href="">병원소개</a>
+                            <div class="sub">
+                                <ul class="menu">
+                                    <li class="it1">
+                                        <dl class="menu_cate">
+                                            <dt>병원소개</dt>
+                                            <dd><a href="">인사말</a></dd>
+                                            <dd><a href="">비전및미션</a></dd>
+                                            <dd><a href="">리드힐전문진료센터</a></dd>
+                                            <dd><a href="">전문의료진소개</a></dd>
+                                            <dd><a href="">병원현황</a></dd>
+                                            <dd><a href="">첨단장비</a></dd>
+                                            <dd><a href="">진료시간및오시는길</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                                <div class="thumbox">
+                                    <ul>
+                                        <li><a href=""><img src="./img/img_3.jpg" alt="" class="thum1"></a></li>
+                                        <li><a href=""><img src="./img/img_2.jpg" alt="" class="thum2"></a></li>
+                                    </ul>
+                                    <dl>
+                                        <dt>※ 리드힐 진료시간</dt>
+                                        <dd>평일 : am 09:00~ pm 06:00</dd>
+                                        <dd>점심 : pm 01:00~ pm 02:00</dd>
+                                        <dd>토요일 : am 09:00~ pm 02:00 ( 토요일, 점심시간 없음 )<br>
+                                            일요일·공휴일 휴일</dd>
+                                    </dl>
+                                    <a href=""><img src="./img/img_1.jpg" alt="" class="thum"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="search">
+                        <div class="search_wrap">
+                            <label for="ck2" class="com_img search_close_btn">
+                                <i class="xi-close"></i>
+                            </label>
+                            <form name="search_form" class="search_field">
+                                <input type="text" placeholder="무엇이 궁금하세요?" class="search_data">
+                                
+                                <label for="" class="com_img search_btn2">
+                                    <i class="xi-search"></i>
+                                </label>
+                            </form>
+                            <div class="hashtag">
+                                <p>
+                                    <a href="">#오시는길</a>
+                                    <a href="">#의료백과</a>
+                                    <a href="">#병원로고</a>
+                                    <a href="">#장례식장</a>
+                                    <a href="">#비급여진료비</a>
+                                    <a href="">#장애진단서</a>
+                                </p>
+                                <p>
+                                    <a href="">#원격지원</a>
+                                    <a href="">#갑상선</a>
+                                    <a href="">#증명서발급</a>
+                                    <a href="">#자가진단</a>
+                                    <a href="">#가정간호</a>
+                                    <a href="">#제중원</a>
+                                </p>
+                                <p>
+                                    <a href="">#로고</a>
+                                    <a href="">#진단서발급</a>
+                                    <a href="">#병원전화번호</a>
+                                    <a href="">#건강검진</a>
+                                    <a href="">#자원봉사</a>
+                                    <a href="">#입찰정보</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            
+
+        </header>
+        <main class="content">
+            <figure class="main_vs">
+                <ul class="ban_box">
+                    <li class="item1"><a href=""><img src="./img/ban1.jpg" alt=""></a></li>
+                    <li class="item2"><a href=""><img src="./img/ban2.jpg" alt=""></a></li>
+                    <li class="item3"><a href=""><img src="./img/ban3.jpg" alt=""></a></li>
+                    <li class="item4"><a href=""><img src="./img/ban4.jpg" alt=""></a></li>
+                </ul>
+                <!--
+                <div class="lrbtn_box">
+                    <button class="vs_btn left"></button>
+                    <button class="vs_btn right"></button>
+                </div>
+                <ul class="numbtn_box">
+                    <li><button class="vs_btn on"></button></li>
+                    <li><button class="vs_btn"></button></li>
+                    <li><button class="vs_btn"></button></li>
+                    <li><button class="vs_btn"></button></li>
+                    <li><button class="vs_btn stop"></button></li>
+                </ul>
+                -->
+            </figure>
+            <div class="con_wrap">
+                <section class="page" id="page1">
+                    <div class="page_wrap">
+                        <ul class="row">
+                            <li class="col3 whtxt c7d92f3">
+                                <h3 class="grd_tit">진료예약</h3>
+                                <p class="grd_com">빠르고 쉽게 진료예약을
+                                    하실 수 있습니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">진료예약</a></li>
+                                    <li><a href="">첫예약상담</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3 whtxt c545454">
+                                <h3 class="grd_tit">증명서류발급</h3>
+                                <p class="grd_com">빠르고 쉽게 서류발급을
+                                    하실 수 있습니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">온라인</a></li>
+                                    <li><a href="">진단서발급</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3 col3 whtxt c24756d">
+                                <h3 class="grd_tit">척추센터</h3>
+                                <p class="grd_com">수술부터 비수술치료까지 환자 상태에 가장 적합한 맞춤치료를 제공합니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">의료진소개</a></li>
+                                    <li><a href="">척추클리닉</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3">
+                                <input type="radio" name="log_ra" id="log_ra1" class="log_ra" checked>
+                                <input type="radio" name="log_ra" id="log_ra2" class="log_ra">
+                                <div class="log_lb_box">
+                                    <label for="log_ra1" class="log_lb log_lb1">로그인</label>
+                                    <label for="log_ra2" class="log_lb log_lb2">비회원로그인</label>
+                                </div>
+                                <form action="" id="login1" class="login">
+                                    <input type="text" name="m_id" placeholder="아이디/진찰권 번호" class="login_input">
+                                    <input type="password" name="m_pw" placeholder="비밀번호" class="login_input">
+                                    <p class="log_link">
+                                        <a href="" class="log_join">회원가입</a>
+                                        <a href="" class="log_idpw">아이디/비밀번호 찾기</a>
+                                    </p>
+                                    <input type="submit" value="로그인" class="login_btn c2763ba">
+                                </form>
+                                <form action="" id="login2" class="login">
+                                    <div class="frm_row">
+                                        <input type="text" name="name" placeholder="이름" class="login_input2">
+                                        <input type="text" name="num" placeholder="진찰권 번호" class="login_input2">
+                                    </div>
+                                    <div class="frm_row">
+                                        <input type="text" name="tel" placeholder="휴대폰번호" class="login_input3">
+                                        <input type="button" value="승인" class="in_btn c2763ba">
+                                    </div>
+                                    <div class="frm_row">
+                                        <input type="text" name="in_num" placeholder="승인번호" class="login_input4">
+                                        <input type="checkbox" name="info_ck" id="info_ck" class="frm_ck">
+                                        <label for="info_ck">정보동의</label>
+                                    </div>
+                                    <input type="submit" value="비회원 로그인" class="login_btn c2763ba">
+                                    
+                                </form>
+                            </li>
+                        </ul>
+                        
+                        <ul class="row">
+                            <li class="col6 cffffff">
+                                <div class="issue_pan">
+                                    <h3 class="issue_tit">SNUH 핫이슈</h3>
+                                    <!--
+                                    <span class="cur">1</span>
+                                    /
+                                    <span class="tot">7</span>
+                                    
+                                    <ul class="issue_btn">
+                                        <li><button class="left"></button></li>
+                                        <li><button class="play"></button></li>
+                                        <li><button class="right"></button></li>
+                                    </ul>
+                                    -->
+                                </div>
+                                <ul class="issue_con">
+                                    <li class="issue_item1">
+                                        <a href=""><img src="./img/tv.jpg" alt="" style=" width: 140px; height: 140px;"></a>    
+                                        <h3 class="issue_item_tit">SBS생방송투데이 관절센터 <br>현호승원장출연</h3>
+                                        <p class="issue_item_com">지난 10월 9일 한글날을 맞이하여 <br>퇴행성관절염에 대한 주제로 전원주씨가 나왔다.</p>
+                                    </li>
+                                    <!--
+                                    <li class="item2">
+                                        <a href="">
+                                            <h3 class="issue_item_tit">대리처방 관련 의료법 개정 안내</h3>
+                                            <p class="issue_item_com">2020년 2월 28일 부터 시행되는 '대리처방 관련 의료법 개정'에 관해 안내 드립니다.</p>
+                                        </a>    
+                                    </li>
+                                    <li class="item3">
+                                        <a href="">
+                                            <h3 class="issue_item_tit">[기획재정부] 공공기관 고객만족도 조사 관련 부패행위 신고안내</h3>
+                                            <p class="issue_item_com">신고방법 : 국민권익위원회에 부패행위 신고 전화(110, 1398) 또는 온라인 접수(www.clean.go ...</p>
+                                        </a>
+                                    </li>
+                                    <li class="item4">
+                                        <a href="">
+                                            <h3 class="issue_item_tit">서울대학교병원 대한외래 Q&A</h3>
+                                            <p class="issue_item_com">2019년 새롭게 개원한 서울대학교병원 대한외래에 대한 궁금증에 대해 개원준비단장인 신장내과 김연수 교수와 ...2019년 새롭게 개원한 서울대학교병원 대한외래에 대한 궁금증에 대해 개원준비단장인 신장내과 김연수 교수와 ...</p>
+                                        </a>    
+                                    </li>
+                                    -->
+                                </ul>
+                            </li>
+                            <li class="col3 whtxt c2a2e40">
+                                <h3 class="grd_tit">동의서 / 증명서</h3>
+                                <p class="grd_com">위임장, 동의서 다운로드
+                                    및 증명서를 발급받으실 수
+                                    있습니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">위임장/동의서</a></li>
+                                    <li><a href="">증명서발급</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3 whtxt c008ace">
+                                <h3 class="grd_tit">게시판</h3>
+                                <p class="grd_com">병원을 이용하시면서
+                                    감사 또는 건의하고자 하는
+                                    사항을 등록하실 수 있습니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">감사합니다</a></li>
+                                    <li><a href="">건의합니다</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="page" id="page2">
+                    <div class="page_wrap">
+                        <h2 class="page_tit">건강정보</h2>
+                        <p class="page_com">질병, 영양, 운동, 생활 속 관리 등 건강에 대한 모든 것
+                        </p>
+                        <ul class="row ht350 whtxt pic_lst">
+                            <li class="col3 helth1">
+                                <a href="">
+                                    <h3 class="grd_tit">팟캐스트</h3>
+                                    <span class="bar"></span>
+                                    <p class="grd_com">리드힐병원 의료진에게
+                                        듣는 건강 이야기
+                                    </p>
+                                </a> 
+                            </li>
+                            <li class="col3 helth2">
+                                <a href="">
+                                    <h3 class="grd_tit">바른몸 튼튼건강</h3>
+                                    <span class="bar"></span>
+                                    <p class="grd_com">건강하고 행보학 삶의 이야기</p>
+                                </a>    
+                            </li>
+                            <li class="col3 helth3">
+                                <a href="">
+                                    <h3 class="grd_tit">공개강좌</h3>
+                                    <span class="bar"></span>
+                                    <p class="grd_com">누구나 열려있는
+                                        공개 건강강좌
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="col3 helth4">
+                                <h3 class="grd_tit">건강채널</h3>
+                                <span class="bar"></span>
+                                <p class="grd_com">더 편하게 만나는 건강정보</p>
+                                <ul class="grd_sn">
+                                    <li><a href="https://ko-kr.facebook.com/pages/category/Health-Beauty/%EB%A6%AC%EB%93%9C%ED%9E%90%EB%B3%91%EC%9B%90-897922950376774/">페이스북</a></li>
+                                    <li><a href="">포스트</a></li>
+                                    <li><a href="">네이버TV</a></li>
+                                    <li><a href="">블로그</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="row whtxt">
+                            <li class="col3 txt_left c000000">
+                                <h3 class="grd_tit">공공의료사업단</h3>
+                                <p class="grd_com">공공보건의료 발전을 위해 다양한 사업을 수행하고 있습니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">사업단 소개</a></li>
+                                    <li><a href="">사업단 사업</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3 txt_left c2763ba">
+                                <h3 class="grd_tit">건강증진센터</h3>
+                                <p class="grd_com">질병 예방 및 삶의 질 향상을 위해 노력합니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">본원</a></li>
+                                    <li><a href="">역촌센터</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3 txt_left c545454">
+                                <h3 class="grd_tit">발전후원회</h3>
+                                <p class="grd_com">따뜻한 마음을 의료 발전으로 보답 하겠습니다.</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">발전후원회</a></li>
+                                    <li><a href="">어린이병원후원</a></li>
+                                </ul>
+                            </li>
+                            <li class="col3 txt_left cc0c0c0">
+                                <h3 class="grd_tit">진료협력센터</h3>
+                                <p class="grd_com">네트워크로 하나되는 의료
+                                    SNUH 진료협력시스템</p>
+                                <ul class="grd_lst">
+                                    <li><a href="">진료의뢰</a></li>
+                                    <li><a href="">협력병원</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="page" id="page3">
+                    <div class="page_wrap">
+                        <h2 class="page_tit">오시는길</h2>
+                        <p class="page_com">리드힐병원으로 오시는 길을 알려드립니다.</p>
+                        <ul class="icon_lst">
+                            <li class="item1">
+                                <a href="">
+                                    <span class="icon"></span>
+                                    <span class="icon_txt">위치안내</span>
+                                </a>
+                            </li>
+                            <li class="item2">
+                                <a href="">
+                                    <span class="icon"></span>
+                                    <span class="icon_txt">원내위치도</span>
+                                </a>
+                            </li>
+                            <li class="item3">
+                                <a href="">
+                                    <span class="icon"></span>
+                                    <span class="icon_txt">주변편의시설</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="map_canvas">
+                            <div id="maparea">
+
+                                <div id="map" style="margin-top: 30px; margin-bottom: 30px; margin-left: 70px; width:960px; height:350px; background:white; ">
+
+                                </div>
+                                
+                                <script>
+                                
+                                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                                
+                                    mapOption = { 
+                                
+                                        center: new daum.maps.LatLng(37.599806, 126.916417), // 지도의 중심좌표
+                                
+                                        level: 3 // 지도의 확대 레벨
+                                
+                                    };
+                                
+                                 
+                                
+                                var map = new daum.maps.Map(mapContainer, mapOption);
+                                
+                                 
+                                
+                                // 마커가 표시될 위치입니다 
+                                
+                                var markerPosition  = new daum.maps.LatLng(37.599806, 126.916417); 
+                                
+                                 
+                                
+                                // 마커를 생성합니다
+                                
+                                var marker = new daum.maps.Marker({
+                                
+                                    position: markerPosition
+                                
+                                });
+                                
+                                 
+                                
+                                // 마커가 지도 위에 표시되도록 설정합니다
+                                
+                                marker.setMap(map);
+                                
+                                 
+                                
+                                var iwContent = '<div style="padding:5px;">은평리드힐병원 <br><a href="" style="color:blue" target="_blank"></a></div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                                
+                                    iwPosition = new daum.maps.LatLng(37.599806, 126.916417); //인포윈도우 표시 위치입니다
+                                
+                                 
+                                
+                                // 인포윈도우를 생성합니다
+                                
+                                var infowindow = new daum.maps.InfoWindow({
+                                
+                                    position : iwPosition, 
+                                
+                                    content : iwContent 
+                                
+                                });
+                                
+                                  
+                                
+                                // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+                                
+                                infowindow.open(map, marker);
+                                
+                                </script>
+                                
+                                <script type="text/javascript" src="http://m1.daumcdn.net/tiara/js/td.min.js"></script>
+                                
+                                <script type="text/javascript">
+                                
+                                var _tiq = 'undefined' !== typeof _tiq ? _tiq : [];
+                                
+                                    window._tiq = _tiq;
+                                
+                                    _tiq.push(['__trackPageview']);
+                                
+                                </script>
+                                
+                                <script type="text/javascript" src="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.js">
+                                
+                                </script>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+            
+    
+
+        <footer class="ftr">
+            <div class="ft_wrap">
+                <nav class="fnb">
+                    <a href=""><img src="./img/ft_ban.png" alt=""></a>
+                    <ul class="ft_top">
+                        <li><a href="">병원소개</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href="">개인정보 취급방침</a></li>
+                        <li><a href="">이메일 무단수집거부</a></li>
+                        <li><a href="">오시는길</a></li>
+                    </ul>
+                    <ul class="ft_logo">
+                        <li><a href=""><img src="./img/logo-footer.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="copy">
+                        <li>
+                            <p class="addr">
+                                <span>서울 은평구 연서로 10 (역촌동) 리드힐병원</span>
+                                <span>Tel: 02.382.7700</span>
+                                <span>사업자번호: 261-97-00416</span>
+                                <span>대표: 황상원</span>
+                            </p>
+                            <p class="copyright">Copyright by LEADHEAL. All rights reserved.</p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+    
+
+
+</body>
+</html>
